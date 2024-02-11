@@ -1,16 +1,17 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/blog">Blog</router-link> |
+    <router-link to="/blogdetails">Blog Details</router-link> |
+    <router-link to="/error">Error</router-link>
   </nav>
   <router-view/>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'DM Serif Display', serif;
+  font-family: 'Jost', sans-serif;
   text-align: center;
   color: #2c3e50;
 }
