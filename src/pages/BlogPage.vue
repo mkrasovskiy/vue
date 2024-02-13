@@ -1,5 +1,27 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <BlogBanner/>
+  <BlogArticles/>
 </template>
+
+<script>
+import BlogBanner from '@/components/BlogBanner.vue';
+import BlogArticles from '@/components/BlogArticles.vue';
+
+  export default {
+    name: 'BlogPage',
+    data() {
+        return {};
+    },
+    mounted() {
+    },
+    methods: {},
+    components: { 
+      BlogBanner,
+      BlogArticles
+     }
+};
+</script>
+
+<style lang="scss" scoped>
+
+</style>
