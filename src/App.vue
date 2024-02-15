@@ -10,11 +10,20 @@
       <router-link class="header__menu-link" to="/">Home</router-link>
       <router-link class="header__menu-link" to="/blog">Blog</router-link>
       <router-link class="header__menu-link" to="/blogdetails">Blog Details</router-link>
-      <router-link class="header__menu-link" to="/error">Error</router-link>
     </nav>
   </header>
   <router-view/>
 </template>
+
+<script>
+import { mapGetters } from 'vuex';
+export default {
+  name: 'App',
+  computed: {
+    ...mapGetters(['getArticle'])
+  }
+}
+</script>
 
 <style lang="scss">
   #app {

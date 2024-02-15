@@ -36,7 +36,7 @@
                         <router-link class="footer-content__pages-list_link" to="/blog">Blog</router-link>
                     </li>
                     <li>
-                        <router-link class="footer-content__pages-list_link" to="/blog">Blog</router-link>
+                        <router-link class="footer-content__pages-list_link" to="/blogdetails">Blog Details</router-link>
                     </li>
                 </ul>
             </div>

@@ -1,132 +1,14 @@
 <template>
     <section class="blog center">
-        <article class="blog__latest-post">
-            <h2 class="blog__latest-post_title">Latest Post</h2>
-            <div class="blog__latest-post-wrp">
-                <img class="blog__latest-post-img" src="../assets/img/latest-post.jpeg" alt="Latest Post" width="569" height="478">
-                <div class="blog__latest-post-content">
-                    <h3 class="blog__latest-post-content_title">Low Cost Latest Invented Interior Designing Ideas</h3>
-                    <div class="blog__latest-post-content_description">
-                        <p class="blog__latest-post-content_txt">Lorem ipsum dolor sit amet, adipiscing Aliquam eu&nbsp;sem vitae turpis dignissim maximus.posuere in.Contrary to&nbsp;popular belief.</p>
-                        <p class="blog__latest-post-content_txt">Lorem Ipsum is&nbsp;not simply random text. It&nbsp;has roots in&nbsp;a&nbsp;piece of&nbsp;classica.</p>
-                    </div>
-                    <div class="blog__latest-post-content_date">
-                        <p class="blog__latest-post-content_date-txt">26&nbsp;December,2022</p>
-                        <a href="#">
-                            <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="26" cy="26.5" r="26" fill="#F4F0EC"/>
-                                <path d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>  
-                </div>                 
-            </div>
-        </article>
+        <LatestPost/>
         <section class="blog__news">
             <div class="blog__news-title">
                 <h2 class="blog__heading_title">Articles &amp;&nbsp;News</h2>
             </div>
-            <div class="blog__news-wrp">
-                <article class="blog__card">
-                    <div class="blog__tag">
-                        <p class="blog__tag_txt">Kitchan Design</p>
-                    </div>
-                    <div class="blog__card-content">
-                        <img class="blog__card-content_img" src="../assets/img/blog-article1.jpeg" alt="photo1">
-                        <h2 class="blog__card-content_title">Let’s Get Solution For Building Construction Work</h2>
-                    </div>
-                    <div class="blog__date">
-                        <p class="blog__date_txt">26 December,2022</p>
-                        <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
-                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                    </div>
-                </article>
-                <article class="blog__card">
-                    <div class="blog__tag">
-                        <p class="blog__tag_txt">Living Design</p>
-                    </div>
-                    <div class="blog__card-content">
-                        <img class="blog__card-content_img" src="../assets/img/blog-article2.jpeg" alt="photo2">
-                        <h2 class="blog__card-content_title">Low Cost Latest Invented Interior Designing Ideas.</h2>
-                    </div>
-                    <div class="blog__date">
-                        <p class="blog__date_txt">22 December,2022</p>
-                        <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
-                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                    </div>
-                </article>
-                <article class="blog__card">
-                    <div class="blog__tag">
-                        <p class="blog__tag_txt">Interior Design</p>
-                    </div>
-                    <div class="blog__card-content">
-                        <img class="blog__card-content_img" src="../assets/img/blog-article3.jpeg" alt="photo3">
-                        <h2 class="blog__card-content_title">Best For Any Office &amp;&nbsp;Business Interior Solution</h2>
-                    </div>
-                    <div class="blog__date">
-                        <p class="blog__date_txt">25 December,2022</p>
-                        <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
-                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                    </div>
-                </article>
-            </div>
-            <div class="blog__news-wrp">
-                <article class="blog__card">
-                    <div class="blog__tag">
-                        <p class="blog__tag_txt">Kitchan Design</p>
-                    </div>
-                    <div class="blog__card-content">
-                        <img class="blog__card-content_img" src="../assets/img/blog-article4.jpeg" alt="photo4">
-                        <h2 class="blog__card-content_title">Let’s Get Solution For Building Construction Work</h2>
-                    </div>
-                    <div class="blog__date">
-                        <p class="blog__date_txt">26 December,2022 </p>
-                        <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
-                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                    </div>
-                </article>
-                <article class="blog__card">
-                    <div class="blog__tag">
-                        <p class="blog__tag_txt">Living Design</p>
-                    </div>
-                    <div class="blog__card-content">
-                        <img class="blog__card-content_img" src="../assets/img/blog-article5.jpeg" alt="photo5">
-                        <h2 class="blog__card-content_title">Low Cost Latest Invented Interior Designing Ideas.</h2>
-                    </div>
-                    <div class="blog__date">
-                        <p class="blog__date_txt">22 December,2022</p>
-                        <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
-                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                    </div>
-                </article>
-                <article class="blog__card">
-                    <div class="blog__tag">
-                        <p class="blog__tag_txt">Interior Design</p>
-                    </div>
-                    <div class="blog__card-content">
-                        <img class="blog__card-content_img" src="../assets/img/blog-article6.jpeg" alt="photo6">
-                        <h2 class="blog__card-content_title">Best For Any Office &amp;&nbsp;Business Interior Solution</h2>
-                    </div>
-                    <div class="blog__date">
-                        <p class="blog__date_txt">25 December,2022</p>
-                        <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
-                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                        
-                    </div>
-                </article>
-            </div>
-            <div class="blog__pagination">
+            <BlogArticle/>
+            <PaginationComp/>
+            <FooterComp/>
+            <!-- <div class="blog__pagination">
                 <a href="#">
                     <svg class="blog__pagination-svg" width="53" height="52" viewBox="0 0 53 52" xmlns="http://www.w3.org/2000/svg">
                         <circle class="blog__pagination-svg_circle" cx="26.5" cy="26" r="25.5"/>
@@ -151,28 +33,31 @@
                             <path class="blog__pagination-svg_path" d="M23.5571 32L29.5 25.3143L23.5571 18.6286" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>                        
                 </a>                                                                                 
-            </div>
+            </div> -->
         </section>
     </section>
 </template>
 
 <script>
+import LatestPost from './LatestPost.vue';
+import BlogArticle from './BlogArticle.vue';
+import PaginationComp from './PaginationComp.vue';
+import FooterComp from './FooterComp.vue';
+
 export default {
-    name: 'BlogArticles',
-
+    name: 'BlogArticlesWrp',
     data() {
-        return {
-            
-        };
+        return {};
     },
-
     mounted() {
-        
     },
-
-    methods: {
-        
-    },
+    methods: {},
+    components: {
+    LatestPost,
+    BlogArticle,
+    PaginationComp,
+    FooterComp
+}
 };
 </script>
 
@@ -284,30 +169,30 @@ export default {
             display: flex;
             justify-content: space-between;
         }
-        &__pagination {
-            margin: 51px auto 200px auto;
-            display: flex;
-            gap: 20px;        
-        }
-        &__pagination-svg {
-            &_circle {
-                stroke: #CDA274;
-                fill: #fff;
-            }
-            &_fill {
-                fill: #292F36;
-            }
-            &_path {
-                stroke: #292F36;
-            }
-            &_circle:hover {
-                stroke: none;
-                fill: #F4F0EC;
-            }
-            &_circle:active {
-                stroke: #CDA274;
-                fill: #fff;
-            }
-        }
+        // &__pagination {
+        //     margin: 0 auto 200px auto;
+        //     display: flex;
+        //     gap: 20px;        
+        // }
+        // &__pagination-svg {
+        //     &_circle {
+        //         stroke: #CDA274;
+        //         fill: #fff;
+        //     }
+        //     &_fill {
+        //         fill: #292F36;
+        //     }
+        //     &_path {
+        //         stroke: #292F36;
+        //     }
+        //     &_circle:hover {
+        //         stroke: none;
+        //         fill: #F4F0EC;
+        //     }
+        //     &_circle:active {
+        //         stroke: #CDA274;
+        //         fill: #fff;
+        //     }
+        // }
     }
 </style>

@@ -1,11 +1,11 @@
 <template>
   <BlogBanner/>
-  <BlogArticles/>
+  <BlogArticlesWrp/>
 </template>
 
 <script>
 import BlogBanner from '@/components/BlogBanner.vue';
-import BlogArticles from '@/components/BlogArticles.vue';
+import BlogArticlesWrp from '@/components/BlogArticlesWrp.vue';
 
   export default {
     name: 'BlogPage',
@@ -17,7 +17,7 @@ import BlogArticles from '@/components/BlogArticles.vue';
     methods: {},
     components: { 
       BlogBanner,
-      BlogArticles
+      BlogArticlesWrp
      }
 };
 </script>
