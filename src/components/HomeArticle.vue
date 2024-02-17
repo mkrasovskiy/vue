@@ -1,55 +1,22 @@
 <template>
     <div class="blog__wrp">
-            <article class="blog__card" v-for="article in getArticles.slice(0, 3)" :key="article.id">
-                <div class="blog__tag">
-                    <p class="blog__tag_txt">{{ article.name }}</p>
-                </div>
-                <div class="blog__card-content">
-                    <img class="blog__card-content_img" :src="require(`@/assets/img/${article.img}`)" alt="article">
-                    <h3 class="blog__card-content_title">{{ article.title }}</h3>
-                </div>
-                <div class="blog__date">
-                    <p class="blog__date_txt">{{ article.date }}</p>
-                    <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
-                        <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                        
-                </div>
-            </article>
-            <!-- <article class="blog__card">
-                <div class="blog__tag">
-                    <p class="blog__tag_txt">Living Design</p>
-                </div>
-                <div class="blog__card-content">
-                    <img class="blog__card-content_img" src="../assets/img/blog-photo2.jpeg" alt="photo2">
-                    <h3 class="blog__card-content_title">Low Cost Latest Invented Interior Designing Ideas.</h3>
-                </div>
-                <div class="blog__date">
-                    <p class="blog__date_txt">22 December,2022</p>
-                    <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
-                        <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                        
-                </div>
-            </article>
-            <article class="blog__card">
-                <div class="blog__tag">
-                    <p class="blog__tag_txt">Interior Design</p>
-                </div>
-                <div class="blog__card-content">
-                    <img class="blog__card-content_img" src="../assets/img/blog-photo3.jpeg" alt="photo3">
-                    <h3 class="blog__card-content_title">Best For Any Office &amp;&nbsp;Business Interior Solution</h3>
-                </div>
-                <div class="blog__date">
-                    <p class="blog__date_txt">25 December,2022</p>
-                    <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
-                        <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                        
-                </div>
-            </article> -->
-        </div>
-        
+        <article class="blog__card" v-for="article in getArticles.slice(0, 3)" :key="article.id">
+            <div class="blog__tag">
+                <p class="blog__tag_txt">{{ article.name }}</p>
+            </div>
+            <div class="blog__card-content">
+                <img class="blog__card-content_img" :src="require(`@/assets/img/${article.img}`)" alt="article">
+                <h3 class="blog__card-content_title">{{ article.title }}</h3>
+            </div>
+            <div class="blog__date">
+                <p class="blog__date_txt">{{ article.date }}</p>
+                <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="blog__card_circle" cx="26" cy="26.267" r="26"/>
+                    <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                        
+            </div>
+        </article>
+    </div>      
 </template>
 
 <script>
@@ -94,7 +61,6 @@ export default {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-row-gap: 30px;
-            // justify-content: space-between;
         }
         &__card {
             position: relative;

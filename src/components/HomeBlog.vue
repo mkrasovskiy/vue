@@ -19,9 +19,9 @@ export default {
     mounted() {
     },
     methods: {},
-    components: { 
-        HomeArticle 
-    }
+    components: {
+    HomeArticle,
+}
 };
 </script>
 

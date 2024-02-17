@@ -13,7 +13,7 @@
                         <p class="blog__latest-post-content_date-txt">26&nbsp;December,2022</p>
                         <a href="#">
                             <svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="26" cy="26.5" r="26" fill="#F4F0EC"/>
+                                <circle class="blog__latest-post-wrp_circle" cx="26" cy="26.5" r="26" fill="#F4F0EC"/>
                                 <path d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
@@ -74,6 +74,18 @@ export default {
             padding: 22px;
             border: 1px solid #E7E7E7;
             border-radius: 62px;
+            transition: 3s;
+            &:hover {
+                background: #F4F0EC;
+            }
+            &_circle {
+                transition: 3s;
+                fill: #F4F0EC;
+                cursor: pointer;
+            }
+            &:hover &_circle {
+                fill: #fff;
+            }
         }
         &__latest-post-img {
             border-radius: 50px;
