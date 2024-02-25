@@ -33,9 +33,11 @@
                 <h2 class="article-list__title">Design sprints are great</h2>
                 <p class="article-list__txt">Lorem ipsum dolor sit amet, adipiscing Aliquam eu&nbsp;sem vitae turpmaximus.posuere in.Contrary to&nbsp;popular belief.There are many variations of&nbsp;passages of&nbsp;Lorem Ipsum available, but the majority have suffered.</p>
                 <ol class="article-list__item-wrp">
-                    <li class="article-list__num">1 <span class="article-list__item">Contrary to&nbsp;popular belief.There are many variations of&nbsp;passages of&nbsp;Lorem Ipsum available, but the majority have suffered.</span></li>
-                    <li class="article-list__num">2 <span class="article-list__item">Contrary to&nbsp;popular belief.There are many variations of&nbsp;passages of&nbsp;Lorem Ipsum available, but the majority have suffered.</span></li>
-                    <li class="article-list__num">3 <span class="article-list__item">Contrary to&nbsp;popular belief.There are many variations of&nbsp;passages of&nbsp;Lorem Ipsum available, but the majority have suffered.</span></li>
+                    <BlogDetailsListArticles 
+                    v-for="blog in filterArticle" 
+                    :key="blog.id"
+                    v-bind:blog="blog"
+                    />
                 </ol>
             </article>
             <div class="article-content">
@@ -46,55 +48,49 @@
         <div class="tags">
             <h2 class="tags__txt">Tags</h2>
             <div class="tags-wrp">
-                <button href="#" v-for="btn in buttonsTag" :key="btn.id" class="tags-wrp__btn">{{ btn.tag }}</button>
+                <button href="#" @click="selectedTag(tag)" v-for="tag in getTags" :key="tag.id" class="tags-wrp__btn">{{ tag.tag }}</button>
             </div>
         </div>
     </section>
 </template>
 
 <script>
-export default {
-    name: 'BlogDetailsContent',
+        import BlogDetailsListArticles from './BlogDetailsListArticles.vue';
 
-    data() {
-        return {
-            buttonsTag: [
-                {
-                    id:1,
-                    tag: 'Kitchen',
-                },
-                {
-                    id:2,
-                    tag: 'Bedroom',
-                },
-                {
-                    id:3,
-                    tag: 'Building',
-                },
-                {
-                    id:4,
-                    tag: 'Architecture',
-                },
-                {
-                    id:5,
-                    tag: 'Kitchen Planning',
-                },
-                {
-                    id:6,
-                    tag: 'Bedroom',
-                },
-            ],
-        };
-    },
+        export default {
+        name: 'BlogDetailsContent',
+        components: { 
+            BlogDetailsListArticles,
+        },
+        data() {
+            return {
+                currentTag: '',
+            };
+        },
+        mounted() {
 
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+        },
+        methods: {
+            selectedTag(tag) {
+            this.currentTag = tag;
+        }
+        },
+        computed: {
+            getTags() {
+                return this.$store.getters.getTags
+            },
+            getBlogList() {
+                return this.$store.getters.getBlogList
+                
+            },   
+            filterArticle() {
+                if(this.currentTag === '') {
+                    return this.getBlogList;
+                }
+            return this.getBlogList.filter((el) => el.tag.includes(this.currentTag.tag))
+        }         
+        }
+    };
 </script>
 
 <style lang="scss" scoped>
@@ -167,21 +163,6 @@ export default {
             letter-spacing: 0.22px;
         }
     }
-    .quote-wrp {
-        margin-bottom: 27px;
-        background: #F4F0EC;
-    }
-    .quote {
-        padding: 53px 227px;
-        text-align: center;
-        &__txt {
-            color: #CDA274;
-            font-size: 25px;
-            font-style: italic;
-            line-height: 31.25px;
-            letter-spacing: 0.5px;
-        }
-    }
     .article-list {
         &__title {
             margin-bottom: 20px;
@@ -202,21 +183,23 @@ export default {
             flex-direction: column;
             gap: 32px;
         }
-        &__num {
-            display: flex;
-            gap: 14px;
+    }
+    .quote-wrp {
+        margin-bottom: 27px;
+        background: #F4F0EC;
+    }
+    .quote {
+        padding: 53px 227px;
+        text-align: center;
+        &__txt {
             color: #CDA274;
-            font-size: 20px;
-            line-height: 25px;
-            letter-spacing: 0.4px;
-        }
-        &__item {
-            color: #4D5053;
-            font-size: 22px;
-            line-height: 33px;
-            letter-spacing: 0.22px;
+            font-size: 25px;
+            font-style: italic;
+            line-height: 31.25px;
+            letter-spacing: 0.5px;
         }
     }
+    
     .article-content {
         &__img {
             margin-bottom: 35px;

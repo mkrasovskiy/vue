@@ -20,7 +20,7 @@ import { mapGetters } from 'vuex';
 export default {
   name: 'App',
   computed: {
-    ...mapGetters(['getArticle'])
+    ...mapGetters(['getArticle', 'getBlogList', 'getTags'])
   }
 }
 </script>
